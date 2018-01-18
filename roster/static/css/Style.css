@@ -1,0 +1,72 @@
+.header {
+	text-align: left;
+}
+
+/*.header_ul{
+	display: inline-block;
+}*/
+.header_li{
+	display: inline-block;
+
+}
+.navbar-default {
+	background-color:transparent !important;
+}
+
+
+.chiku{
+  max-height: 100%;
+  width: 100%;
+
+}
+.chiku2{
+  max-height: 100%;
+    width: 100%;
+}
+.navbar-default{
+  margin-top: -63%;
+}
+.col-sm-3
+{
+  margin: 10% 0 0 0;
+  padding: 10px;
+
+}
+.hello{
+  margin: 0 0 0 15%;
+  width: 60%;
+  background-color:	#696969;
+  text-align: center;
+
+}
+.hello1{
+
+  font-weight: bold;
+}
+.hello2{
+  color: white;
+}
+
+.form-control {
+	font size:10px;
+}
+
+h2 {
+	width: 100px;
+}
+
+table {
+	border:4px solid black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+tr{
+    border:4px solid black;
+	text-align: center;
+}
+
+.my_th {
+ text-align: center;
+
+}

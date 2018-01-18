@@ -1,0 +1,31 @@
+{% extends 'base-main.html' %}
+{% load staticfiles %}
+{% load static %}
+{% block content %}
+<div class="table1">
+  <table border="2px solid red">
+  <tr>
+    <th>Day</th>
+    <th class="my_th">P1</th>
+    <th class="my_th">P2</th>
+    <th class="my_th">P3</th>
+    <th class="my_th">P4</th>
+    <th class="my_th">P5</th>
+    <th class="my_th">P6</th>
+  </tr>
+
+{% for i in tf %}
+  <tr>
+    <th class="my_th">{{i.get_day_type_display}}</th>
+    <td height="10px">{{i.p1}}</td>
+    <td>{{i.p2}}</td>
+    <td>{{i.p3}}</td>
+    <td>{{i.p4}}</td>
+    <td>{{i.p5}}</td>
+    <td>{{i.p6}}</td>
+
+  </tr>
+{% endfor %}
+  </table>
+</div>
+{% endblock %}>

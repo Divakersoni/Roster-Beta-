@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ROSTER || An Automated TimeTable Generator</title>
+    {% load staticfiles %}
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+    function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href="{% static 'css/bootstrap.css' %}" type="text/css" rel="stylesheet" media="all">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Style.css' %}"/>
+    <link href="{% static 'css/font-awesome.css'%}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/lightbox.css'%}">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    function Department() {
+        var x = null, url;
+        if(document.getElementById) {
+        x = document.getElementById('List');
+        }
+        else if(document.all) {
+		x = document.all['List'];
+		}
+		if(x && (url = x.options[x.selectedIndex].value)) {
+		location.href = url;
+		}
+        }
+    function findt() {
+		var ssE = null, url;
+		var y = null, dbaseurl;
+		if(document.getElementById) {
+		ssE = document.getElementById('urlList');
+		y = document.getElementById('DList');
+		} else if(document.all) {
+		ssE = document.all['urlList'];
+		y = document.all['DList'];
+		}
+		if((ssE && (url = ssE.options[ssE.selectedIndex].value)) && (y && (dbaseurl = y.options[y.selectedIndex].value))) {
+		location.href=dbaseurl+url
+		}
+		}
+		function findm() {
+		var ssE = null, url;
+		var y = null, dbaseurl;
+		var z = null, dbaseurl1;
+		if(document.getElementById) {
+		ssE = document.getElementById('urlList');
+		y = document.getElementById('DList');
+		z = document.getElementById('urlList1');
+		} else if(document.all) {
+		ssE = document.all['urlList'];
+		y = document.all['DList'];
+		z = document.all['urlList1'];
+		}
+		if((ssE && (url = ssE.options[ssE.selectedIndex].value)) && (y && (dbaseurl = y.options[y.selectedIndex].value)) && (z && (dbaseurl1 = z.options[z.selectedIndex].value))) {
+		location.href=dbaseurl+url+dbaseurl1
+		}
+		}
+		$(function() {
+		    $("#btn1").click(function() {
+		        var seloptions = $("select#DList").val() || "";
+		        if (seloptions != "") {
+		            $("#results").text("hellllo");
+		        } else {
+		            $("#results").text("hello1234");
+		        }
+		    });
+		});
+		</script>
+</head>
+<body>
+<div class="container-fluid">
+<div class="chiku">
+  <img class="chiku2" src="{% static 'images/jecrc.jpg' %}"alt='Divaker'>
+</div>
+<nav class="navbar navbar-default">
+    <div class="header">
+    <ul class="header_ul">
+    <li class="header_li"><img style="margin:-1em 0 0 -3em;" src="{% static 'images/logo.jpg' %}"/></li>
+    <li class="header_li" style="margin-left:25%;"><a href="/home/"><h1 style="font-size: 5em;">Roster</h1></a></li>
+    </ul>
+  </div>
+</nav>
+{% block content %}
+{% endblock content %}
+</div>
+<script type="text/javascript" src="{% static 'js/jquery-2.1.4.min.js'%}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.js'%}"></script>
+<script src="{% static 'js/lightbox-plus-jquery.min.js'%}"> </script>
+<script type="text/javascript" src="{% static 'js/move-top.js'%}"></script>
+<script type="text/javascript" src="{% static 'js/easing.js'%}"></script>
+<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){
+				event.preventDefault();
+		$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$().UItoTop({ easingType: 'easeOutQuart' });
+	});
+</script>
+<script src="{% static 'js/rAF.js'%}"></script>
+<script src="{% static 'js/demo-2.js'%}"></script>
+<script src="{% static 'js/waypoints.min.js'%}"></script>
+<script src="{% static 'js/counterup.min.js'%}"></script>
+<script>
+	jQuery(document).ready(function( $ ) {
+		$('.counter').counterUp({
+			delay: 10,
+			time: 1000
+		});
+	});
+</script>
+<script src="{% static 'js/jarallax.js'%}"></script>
+<script type="text/javascript">
+	$('.jarallax').jarallax({
+		speed: 0.5,
+		imgWidth: 1366,
+		imgHeight: 768
+	})
+</script>
+<script src="{% static 'js/SmoothScroll.min.js'%}"></script>
+
+</body>
+</html>

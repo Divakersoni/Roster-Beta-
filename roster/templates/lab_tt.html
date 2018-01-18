@@ -1,0 +1,28 @@
+{% extends 'base-main.html' %}
+{% load staticfiles %}
+{% block content %}
+  <div class="row">
+  <div class="col-sm-4">
+ <select name="select" id="DList" class="select1">
+    <option value="">Block</option>
+    <option value="/A">A</option>
+    <option value="/B">B</option>
+    <option value="/C">C</option>
+    <option value="/D">D</option>
+</select>
+</div>
+  <div class="col-sm-4">
+<select name="select" id="urlList" class="select1">
+    <option value="">Lab Name</option>
+    {% for i in l %}
+    <option value="/Lab/{{i.id}}/">{{i.lab_no}}({{i.alt_name}})</option>
+    {% endfor %}
+</select>
+  </div>
+  <div class="col-sm-4">
+    <div class="form-group">
+	    <input type="button" class="btn btn-info" id="btn1" value="Find Now" onclick="findt();">
+    </div>
+  </div>
+</div>
+{% endblock %}
